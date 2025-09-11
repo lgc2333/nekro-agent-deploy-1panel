@@ -1,0 +1,5 @@
+{
+  "token": "${NAPCAT_WEBUI_TOKEN}",
+  "defaultToken": false,
+  "autoLoginAccount": "${NAPCAT_QQ}"
+}

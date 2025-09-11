@@ -1,0 +1,97 @@
+additionalProperties:
+  formFields:
+    - envKey: PANEL_APP_PORT_HTTP
+      labelZh: Nekro Agent WebUI 端口
+      labelEn: Nekro Agent WebUI Port
+      type: number
+      rule: paramPort
+      required: true
+      default: 8021
+
+    - envKey: NEKRO_ADMIN_PASSWORD
+      labelZh: Nekro Agent WebUI 管理员密码
+      labelEn: Nekro Agent WebUI Admin Password
+      type: password
+      rule: paramComplexity
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: NAPCAT_QQ
+      labelZh: NapCat 准备登录的 QQ 号（不填需手动配置适配器连接）
+      labelEn: NapCat QQ Account (need manually configure adapter connection when leave empty)
+      required: false
+      type: text
+
+    - envKey: PANEL_APP_PORT_NAPCAT_HTTP
+      labelZh: NapCat WebUI 端口
+      labelEn: NapCat WebUI Port
+      type: number
+      rule: paramPort
+      required: true
+      default: 6099
+
+    - envKey: NAPCAT_WEBUI_TOKEN
+      labelZh: NapCat WebUI Token
+      labelEn: NapCat WebUI Token
+      required: true
+      type: password
+      rule: paramComplexity
+      default: nekro_agent
+      random: true
+
+    - envKey: NAPCAT_ACCESS_URL
+      labelZh: NapCat WebUI 访问地址（用于 NA WebUI 适配器页中的内嵌 NC WebUI）
+      labelEn: NapCat WebUI Access URL (for embedded NC WebUI in NA WebUI adapter page)
+      type: text
+      rule: paramHttp
+      required: true
+      default: http://localhost:6099/webui
+
+    - envKey: NAPCAT_CONTAINER_MAC_ADDRESS
+      labelZh: NapCat 容器使用的 Mac 地址（不填随机生成）
+      labelEn: NapCat Container MAC Address (leave empty for random)
+      required: false
+      type: text
+
+    - envKey: ONEBOT_ACCESS_TOKEN
+      labelZh: OneBot V11 适配器 AccessToken
+      labelEn: OneBot V11 Adapter AccessToken
+      required: true
+      default: nekro_agent
+      random: true
+      rule: paramComplexity
+      type: password
+
+    - envKey: PANEL_DB_HOST
+      labelZh: PostgreSQL 服务
+      labelEn: PostgreSQL Database Service
+      type: service
+      key: postgresql
+      required: true
+
+    - envKey: PANEL_DB_NAME
+      labelZh: PostgreSQL 数据库名
+      labelEn: PostgreSQL Database Name
+      type: text
+      rule: paramCommon
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: PANEL_DB_USER
+      labelZh: PostgreSQL 用户
+      labelEn: PostgreSQL User
+      type: text
+      rule: paramCommon
+      required: true
+      default: nekro_agent
+      random: true
+
+    - envKey: PANEL_DB_USER_PASSWORD
+      labelZh: PostgreSQL 用户密码
+      labelEn: PostgreSQL User Password
+      type: password
+      required: true
+      default: nekro_agent
+      random: true

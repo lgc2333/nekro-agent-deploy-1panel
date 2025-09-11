@@ -1,0 +1,17 @@
+{
+  "network": {
+    "websocketClients": [
+      {
+        "enable": true,
+        "name": "nekro",
+        "url": "ws://${CONTAINER_NAME}:8021/onebot/v11/ws",
+        "reportSelfMessage": false,
+        "messagePostFormat": "array",
+        "token": "${ONEBOT_ACCESS_TOKEN}",
+        "debug": false,
+        "heartInterval": 30000,
+        "reconnectInterval": 30000
+      }
+    ]
+  }
+}
