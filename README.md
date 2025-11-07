@@ -13,12 +13,15 @@
 
 ### 1. 安装本项目至 1Panel 本地应用中
 
-<details>
-<summary>点击展开/折叠详细步骤</summary>
+依次执行以下命令：
+
+```bash
+wget -O /tmp/nekro-1p.zip https://github.com/lgc2333/nekro-agent-deploy-1panel/archive/refs/heads/main.zip
+sudo unzip /tmp/nekro-1p.zip -d /tmp
+sudo cp -rv /tmp/nekro-agent-deploy-1panel-main/nekro-agent /opt/1panel/resource/apps/local
+```
 
 ![install guide](readme/setup-local-app.jpg)
-
-</details>
 
 ### 2. 从 1Panel 应用商店安装 NA
 
